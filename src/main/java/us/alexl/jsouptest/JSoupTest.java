@@ -7,6 +7,14 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 public class JSoupTest {
+	
+	/**
+	 * The default behavior is to use the Certificate Authorities that come with your Java installation. 
+	 * The fact that everything works out of the box means that the remote host is using a certificate 
+	 * signed by a certificate authority (is not self-signed).
+	 * @param args
+	 * @throws IOException
+	 */
 	public static void main(String[] args) throws IOException {
 		String url = "https://quotes.wsj.com/GOOG/financials/annual/cash-flow";
 		Document doc = Jsoup.connect(url).get();
